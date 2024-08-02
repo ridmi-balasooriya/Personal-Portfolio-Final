@@ -1,0 +1,26 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+myenv
+# dependencies
+personal_portfolio/node_modules
+personal_portfolio/.pnp
+personal_portfolio.pnp.js
+
+# testing
+personal_portfolio/coverage
+
+
+# misc
+personal_portfolio/.DS_Store
+personal_portfolio/.env.local
+personal_portfolio/.env.development.local
+personal_portfolio/.env.test.local
+personal_portfolio/.env.production.local
+
+personal_portfolio/npm-debug.log*
+personal_portfolio/yarn-debug.log*
+personal_portfolio/yarn-error.log*
+
+portfolio_backend/db.sqlite3
+portfolio_backend/portfolio_backend/__pycache__
+portfolio_backend/personal_portfolio/__pycache__
+portfolio_backend/.env

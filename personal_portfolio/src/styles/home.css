@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+@import 'tailwindcss/components';
+@layer components{
+    body{
+        @apply
+        font-light
+      
+        tracking-wide
+        bg-fixed
+        h-screen
+        text-lg
+    }
+
+    h1{
+        @apply 
+        lg:text-5xl
+        md:text-5xl
+        text-4xl
+        font-medium
+        py-2;        
+    }
+    h2{
+        @apply
+        text-3xl
+        pb-2;
+    }
+    h3{
+        @apply 
+        text-3xl
+        py-2;
+    }
+    
+
+    .contact_form input, .contact_form textarea{
+        @apply
+        mx-auto
+        my-2
+        p-2
+        w-96
+        bg-opacity-50 
+        rounded-2xl
+        text-black        
+    }
+}
+:root {
+    --prime-color: #3f3f3f;
+    --secondry-color:#f7f7f7; 
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    margin-right: 10px;
+    box-shadow: inset 0 0 5px rgb(0, 0, 0);
+    border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--prime-color);
+    border-radius: 20px;
+}
+body{
+    font-family: 'Oswald', sans-serif; 
+    background-image:url('../../public/images/background_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.portfolio_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexsblockdiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.flexsblock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flexskill{
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center
+}
+
+.project-div{
+    width: 100%;   
+}
+.read-more{
+    border: thin solid;
+    padding: 3px 15px;
+}
+.validationError{
+    border: thin solid #ffbebe;
+    background-color: #ffd9d9;
+}
+.flexsblock:nth-child(odd) .read-more:hover{
+    background-color: var(--secondry-color);
+    color: var(--prime-color);
+}
+.flexsblock:nth-child(even) .read-more:hover{
+    background: var(--prime-color);
+    color: var(--secondry-color);
+}
+.flexsblock:nth-child(odd){
+    background: var(--prime-color);
+    color: var(--secondry-color);
+}
+.flexsblock:nth-child(even){
+    background: var(--secondry-color);
+    color: var(--prime-color);
+}
+.flexskill div{
+    background: rgb(63 63 63 / 100%);
+    color: var(--secondry-color);
+    padding: 4px 6px;
+    margin: 3px;
+}
+.flexsblock:nth-child(odd) .flexskill div, .flexsblock:nth-child(odd) .flexskill  div, .flexsblock:nth-child(odd) .flexskill  div{
+    background:rgb(248 248 248 / 100%);
+    color: var(--prime-color);    
+}
+.skilldiv:nth-child(odd){
+    background:var(--prime-color);
+    color: var(--secondry-color);
+}
+.skilldiv:nth-child(even){
+    background:var(--secondry-color);
+    color: var(--prime-color);
+}
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(closest-side, transparent 79%, transparent 80% 100%),
+        conic-gradient(rgb(143, 143, 143) var(--progress), rgba(0, 0, 0, 0.077) 0);    
+
+}
+progress {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    appearance: none;
+    border: none;
+    background-color: var(--secondry-color);
+    border: thin solid var(--prime-color);
+    border-radius: 10px;
+    overflow: hidden;
+}
+progress::-webkit-progress-bar {
+  background-color: var(--secondry-color);
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  background-color: var(--prime-color);
+  border-radius: 10px;
+}
+
+.skilldiv:nth-child(odd) progress {
+    width: 100%;
+    height: 10px;
+    margin-top: 5px;
+    appearance: none;
+    border: none;
+    background-color: var(--prime-color);
+    border-radius: 10px;
+    overflow: hidden;
+    border: thin solid var(--secondry-color);
+}
+.skilldiv:nth-child(odd)  progress::-webkit-progress-bar {
+  background-color: var(--prime-color);
+  border-radius: 10px;
+}
+
+.skilldiv:nth-child(odd)  progress::-webkit-progress-value {
+  background-color: var(--secondry-color);
+  border-radius: 10px;
+}
+
+/* Sending Anim */
+@keyframes sendemail{
+    0%{
+        transform: translateX(-100%) translateY(0) scale(0);
+    }
+    10%{
+        transform: translateX(-10%) translateY(0) scale(1);
+    }
+    100%{
+        transform: translateX(80%) translateY(-10%) scale(0);      
+    }
+}
+.sending_progress img{
+    animation: sendemail 6s ease-in-out  infinite backwards;
+}
+.send_msg{
+    font-size: 25px;
+}
+/* END - Sending Anim */
+
+/* Dot Flash Box for Sending ... */
+.dot-box{
+    display: inline-block;
+    margin-left: 22px;
+}
+.dot-flashing {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #ffffff;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+  }
+  .dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dot-flashing::before {
+    left: -15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #ffffff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  .dot-flashing::after {
+    left: 15px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #ffffff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dot-flashing {
+    0% {
+      background-color: #ffffff;
+    }
+    50%, 100% {
+      background-color: rgba(27, 27, 27, 0.832);
+    }
+  }
+/* END - Dot Flash Box for Sending ... */
+
+
+/* Preloader */
+.preloader_div{
+    display: grid;
+    grid-column: 1;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+.preloader {
+    margin-right: 10%;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .preloader div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: var(--prime-color);
+    animation: preloader 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .preloader div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .preloader div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .preloader div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes preloader {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  
+/* Preloader END */
+
+/* MEDIA QUERY */
+#root{
+    display: grid;
+    grid-template-columns:200px minmax(150px, auto) 0.15fr;
+    grid-template-rows: 1.5em 1fr 1.5em;
+    height: 100vh;
+    
+}
+section#profile{
+    grid-row: 2;
+    grid-area: main;
+}
+.profile-inner-div{
+    box-shadow: none;
+}
+main{
+    grid-column: 1 / 3;
+    grid-row: 2;
+}
+section.navigation{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    z-index: 1;
+}
+nav{
+    position: sticky;
+    left: 0;
+    background: var(--prime-color);
+}
+.menubutton{
+    background: var(--prime-color);
+    display: inline-block;
+    padding: 5px;
+    margin-left: 5px;
+    box-shadow: 3px 3px 3px #7f7f7f;
+}
+.menubutton .material-symbols-outlined{
+    font-size: 40px;
+    color: var(--secondry-color);
+    cursor: pointer;
+}
+.menubutton #menu{
+    display: none;
+}
+.menubutton.hidemenubtn{
+    display: none;
+}
+nav .closebutton{
+    display: block;
+    float: right;
+    padding: 5px;
+}
+nav .closebutton .material-symbols-outlined{
+    font-size: 30px;
+    color: var(--secondry-color);
+    cursor: pointer;
+}
+nav .closebutton #close{
+    display: none;
+}
+nav.openmenu{
+    display: block;
+}
+nav.closemenu{
+    display: none;
+}
+nav ul{
+    clear: both;
+    margin: auto;
+    padding-top: 1.75em;
+    height: 100vh;
+    width: 200px;
+    background: var(--prime-color);
+}
+nav.openmenu ul{
+    padding-top: 0px;
+}
+nav ul li a{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px 10px;
+    text-align: left;
+    color:var(--secondry-color);
+    background: var(--prime-color);
+    transition: background-color 0.2s, width 1.5s, padding-right 1.5s;
+}
+nav ul li a:hover, nav ul li a.active{
+    box-shadow: 5px 0px 3px #00000060;
+    background-color: var(--secondry-color);
+    color:#000;
+}
+nav ul li a .material-symbols-outlined{
+    display: block;
+    width: 30px;
+}
+nav ul li a  .material-symbols-outlined.hr{
+    display: none;
+}
+nav ul li:first-child{
+    display: block;
+} 
+.potfolio-profile-pic{
+    border-radius: 100%;
+    border: thin solid #cdcecb;
+    box-shadow: #c0c0c0 1px 1px 2px 0px;
+}
+@media screen and (max-width:479px) {
+    main{
+        overflow-y:scroll;
+    }
+    main h2{
+        margin-top: 2rem; 
+    }
+    .flexsblockdiv{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        flex-direction: column;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    
+    .flexsblock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        width: 100%;
+    }
+    .flexsblock:nth-child(odd){
+        background:var(--prime-color);
+        color: var(--secondry-color);
+    }
+    .flexsblock:nth-child(even){
+        background:var(--secondry-color);
+        color: var(--prime-color);
+    }
+    .flexskill div{
+        padding: 4px 6px;
+        margin: 3px;
+    }
+    .flexskill:nth-child(odd) .flexskill div{
+        background:rgb(248 248 248 / 100%) !important;
+        color: var(--prime-color) !important; 
+    }
+    .flexsblock:nth-child(even) .flexskill div{         
+        background: rgb(63 63 63 / 100%) !important;
+        color: var(--secondry-color) !important;   
+    }
+    #techSkills .flexsblockdiv, #softSkills .flexsblockdiv{
+        width: 80%;
+    }
+    .portfolio_section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .skilldiv{
+        padding: 30px 40px;
+        width: 100%;
+    }
+    #softSkills{
+        padding-top: 0px;
+    }
+    .contact_form{
+        width: 100%;
+    }
+    .contact_form input, .contact_form textarea, .contact_form button{
+        width: 95%;
+    }
+}
+@media screen and (min-width: 480px) {
+    main{
+        overflow-y: auto;
+    }
+    .flexsblockdiv{
+        padding-left:10px;
+        padding-right:10px;
+        
+    }
+    .flexsblock{
+        padding:20px 25px;
+    }
+    .portfolio_section{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    .flexsblock:nth-child(6n+1), .flexsblock:nth-child(6n+4), .flexsblock:nth-child(6n+5){
+        background:var(--prime-color);
+        color: var(--secondry-color);
+    }
+    .flexsblock:nth-child(6n+2), .flexsblock:nth-child(6n+3){
+        background:var(--secondry-color);
+        color: var(--prime-color);
+    }
+    .flexskill div{
+        background: rgb(63 63 63 / 100%) !important;
+        color: var(--secondry-color) !important;
+        padding: 4px 6px;
+        margin: 3px;
+    }
+    .flexsblock:nth-child(6n+1) .flexskill div, .flexsblock:nth-child(6n+4) .flexskill  div, .flexsblock:nth-child(6n+5) .flexskill  div{
+        background:rgb(248 248 248 / 100%) !important;
+        color: var(--prime-color) !important;    
+    }    
+    #techSkills .flexsblockdiv, #softSkills .flexsblockdiv{
+        flex-direction: row;
+    }
+    #techSkills .flexsblockdiv .skilldiv, #softSkills .flexsblockdiv .skilldiv{
+        width: 33.333333%;
+        padding: 1.5rem 10px;
+    }
+}
+@media screen and (min-width: 650px) {
+    #root{
+        display: grid;
+        grid-template-columns:150px minmax(400px, auto) 0.05fr;
+        grid-template-rows: 1.5em 1fr 1.5em;
+        grid-template-areas: 
+        "nav . ."
+        "nav main ."
+        "nav . .";
+        height: 100vh;
+        
+    }
+    section#profile{
+        grid-row: 2;
+        grid-area: main;
+    }
+    main{
+        grid-area: main;
+        grid-row: 2;
+    }
+    section.navigation{
+        grid-row: 1 / -1;
+        grid-area: nav;
+    }   
+    nav{
+        position: sticky;
+        left: 0;
+        background-color: transparent;
+    }
+    .menubutton{
+        display: none;
+    }
+    
+    nav.closemenu{
+        display: block;
+    }
+    nav .closebutton{
+        display: none;
+    }
+    nav ul{
+        margin: auto 0px;
+        padding-top: 1.75em;
+        height: 100vh;
+        width: 140px;
+    }
+    nav ul li a{
+        display: inline-block;
+        padding: 15px;
+        text-align: center;
+        transition: background-color 0.2s, width 1.5s, padding-right 1.5s;
+    }
+    nav ul li a:hover, nav ul li a.active{
+        width: 105%;
+    }
+    nav ul li a .material-symbols-outlined{
+        width: auto;
+    }
+    nav ul li a  .material-symbols-outlined.hr{
+        display:  block;
+    }
+    .preloader_div{
+        padding-right: 10%;
+    }
+}
+@media screen and (min-width: 800px) {
+    body{
+        overflow: auto;
+    }
+    .flexsblockdiv{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+    }
+    .flexsblock{
+        padding: 2.5rem;
+    }
+    .portfolio_section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }    
+    #techSkills .flexsblockdiv .skilldiv, #softSkills .flexsblockdiv .skilldiv{
+        padding: 1.5rem 10px;
+    }
+}
+@media screen and (min-width: 880px) {
+    #root{
+        display: grid;
+        grid-template-columns: 0.05fr 100px minmax(300px, 1.5fr) minmax(200px, 3fr) 0.05fr;
+        grid-template-rows: 2.5em 1fr 2.5em;
+        grid-template-areas: 
+        ". nav profile . ."
+        ". nav profile main ."
+        ". nav profile . .";
+        height: 100vh;
+        
+    }
+    section#profile{
+        grid-row: 1 / -1;
+        grid-area: profile;
+    }
+    .profile-inner-div{
+        box-shadow: 3px 3px 4px 3px #ccc;
+    }
+    main{
+        grid-area: main;
+        overflow: hidden;
+    }
+    main:hover{
+        overflow: auto;
+    }
+    section.navigation{
+        grid-row: 1 / -1;
+        grid-area: nav;
+    }    
+    nav ul{
+        width: 100px;
+        margin: auto;
+    }
+    
+    nav ul li a{
+        padding: 15px;
+    }
+    nav ul li:first-child{
+        display: none;
+    }
+    nav ul li a:hover, nav ul li a.active{
+        width: 115%;
+    }
+    .portfolio_section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left:5px;
+        padding-right:5px;
+    }
+    #profile{
+        padding-left: 0px;
+    }
+    .flexsblockdiv{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        flex-direction: column;
+        padding-left:10px;
+        padding-right:10px;
+    }
+    
+    .flexsblock{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2.5rem;
+        width: 100%;
+    }
+    .flexsblock:nth-child(odd){
+        background:var(--prime-color);
+        color: var(--secondry-color);
+    }
+    .flexsblock:nth-child(even){
+        background:var(--secondry-color);
+        color: var(--prime-color);
+    }
+    .flexskill div{
+        padding: 4px 6px;
+        margin: 3px;
+    }
+    .flexskill:nth-child(odd) .flexskill div{
+        background:rgb(248 248 248 / 100%) !important;
+        color: var(--prime-color) !important; 
+    }
+    .flexsblock:nth-child(even) .flexskill div{         
+        background: rgb(63 63 63 / 100%) !important;
+        color: var(--secondry-color) !important;   
+    }
+    .project-div{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #root{
+        grid-template-columns: 0.05fr 100px minmax(300px, 1.5fr) minmax(600px, 3fr) 0.05fr;      
+    }
+    .flexsblockdiv{
+        flex-direction: row;
+    }
+    
+    .flexsblock{
+        width: 50%;
+        flex-direction: column;
+        padding:20px 25px;
+    }
+    .flexsblock:nth-child(6n+1), .flexsblock:nth-child(6n+4), .flexsblock:nth-child(6n+5){
+        background:var(--prime-color);
+        color: var(--secondry-color);
+    }
+    .flexsblock:nth-child(6n+2), .flexsblock:nth-child(6n+3){
+        background:var(--secondry-color);
+        color: var(--prime-color);
+    }
+    .flexskill div{
+        background: rgb(63 63 63 / 100%) !important;
+        color: var(--secondry-color) !important;
+        padding: 4px 6px;
+        margin: 3px;
+    }
+    .flexsblock:nth-child(6n+1) .flexskill div, .flexsblock:nth-child(6n+4) .flexskill  div, .flexsblock:nth-child(6n+5) .flexskill  div{
+        background:rgb(248 248 248 / 100%) !important;
+        color: var(--prime-color) !important;    
+    }
+    #techSkills .flexsblockdiv .skilldiv, #softSkills .flexsblockdiv .skilldiv{
+        padding: 1.5rem;
+    }
+    .project-div{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1285px) {
+    #root{
+        grid-template-columns: 0.15fr 100px minmax(400px, 1.5fr) minmax(500px, 3fr) 0.05fr;
+    }
+
+    .flexsblockdiv{
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+    }
+    .flexsblock{
+        padding: 2.5rem;
+    }
+    .portfolio_section{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .project-div{
+        width: 100%;
+    }
+    
+}

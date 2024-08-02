@@ -1,0 +1,211 @@
+{
+    "personal_info": {
+        "name": "Ridmi Balasooriya",
+        "title": "Full Stack Engineer",
+        "image" : "ridmi-balasooriya.png",
+        "summary": "I am a self-motivated and creative problem-solver with a positive can-do attitude. I am always eager to learn new skills and take on new challenges to advance my career. As a proactive team player with strong communication skills, I am dedicated to contributing to the success of any team I work with."
+    },        
+    "contact_details": {
+            "address": "Dubai, UAE",
+            "email": "ridmi.bizy@gmail.com",
+            "contact_no": "971 58 990 8538"
+        },
+    "social_media": [
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/ridmi-balasooriya-58177242",
+            "icon": "linkedIn_logo.png"
+        },
+        {
+            "name": "GitHub",
+            "link": "https://github.com/ridmi-balasooriya",
+            "icon": "github_logo.png"
+        },
+        {
+            "name": "Website",
+            "link": "",
+            "icon": ""
+        }
+    ],    
+    "working_experiance": [
+        {
+            "title": "Web Master",
+            "company": "Ekwa Marketing",
+            "start_date": "2017-06-01",
+            "end_date": "2021-05-31",
+            "skills": [
+                "Web Development", "JavaScript", "HTML", "CSS", "PHP", "jQuery", "AJAX", "Photoshop", "WordPress", "Mobile Web Design", "Bootstrap" 
+            ],
+            "projects": []
+        },
+        {
+            "title": "Manager Patient Forms and Product Marketing",
+            "company": "Ekwa Marketing",
+            "start_date": "2016-04-01",
+            "end_date": "2017-05-31",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
+            ],
+            "projects": []
+        },
+        {
+            "title": "Technical Engineer",
+            "company": "Ekwa Marketing",
+            "start_date": "2012-12-01",
+            "end_date": "2016-03-31",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Web forms"
+            ],
+            "projects": []
+        },
+        {
+            "title": "Program Analyst and Instructor",
+            "company": "National Institute of Business Management",
+            "start_date": "2012-08-01",
+            "end_date": "2012-11-30",
+            "skills": [
+                "JavaScript", "HTML", "CSS", "PHP", "jQuery", "Teaching"
+            ],
+            "projects": []
+        }   
+          
+    ],
+    "education_qualification": [
+        {
+            "school": "University College Dublin",
+            "degree": "Bachelor of Science (B.Sc.)",
+            "field": "Computer Science",
+            "grade": "Second Class First Grade",
+            "end_date": "2015"
+        },
+        {
+            "school": "Sri Lanka Institute of Information Technology",
+            "degree": "Professional Certificate",
+            "field": "Php and MySql",
+            "grade": "",
+            "end_date": "2013"
+        },
+        {
+            "school": "National Institute of Business Management",
+            "degree": "Advance Diploma in Computer Based Information Systems",
+            "field": "Computer Science",
+            "grade": "",
+            "end_date": "2012"
+        },
+        {
+            "school": "National Institute of Business Management",
+            "degree": "Diploma in Computer System design",
+            "field": "Computer Science",
+            "grade": "Distinction",
+            "end_date": "2011"
+        }
+    ],
+    "tech_skills": [
+        {"skill_name": "Python", "status": 75 },
+        {"skill_name": "Django", "status": 75 },
+        {"skill_name": "React.js", "status": 75 },
+        {"skill_name": "HTML", "status": 80 },
+        {"skill_name": "CSS", "status": 80 },
+        {"skill_name": "JavaScript", "status": 80 },        
+        {"skill_name": "ECMAScript", "status": 70 },
+        {"skill_name": "Ajax", "status": 80 },           
+        {"skill_name": "RESTful API", "status": 70 },    
+        {"skill_name": "Bootstrap", "status": 70 },
+        {"skill_name": "Tailwind Css", "status": 50 }, 
+        {"skill_name": "GIT/GIT Hub", "status": 50 },
+        {"skill_name": "Amazon Web Services", "status": 40 },        
+        {"skill_name": "PostgreSQL/MySQL", "status": 50  },
+        {"skill_name": "NodeJS", "status": 40 },
+        {"skill_name": "ExpressJS", "status": 40 },
+        {"skill_name": "MongoDB", "status": 40 }
+    ],
+    "soft_skills": [
+        {"skill_name": "Communication", "status": 90 },
+        {"skill_name": "Problem-solving", "status": 90  },
+        {"skill_name": "Adaptability", "status": 90 },
+        {"skill_name": "Time management", "status": 90 },
+        {"skill_name": "Teamwork", "status": 90  },
+        {"skill_name": "Collaboration", "status": 90  },
+        {"skill_name": "Attention to detail", "status": 90  },
+        {"skill_name": "Continuous learning", "status": 90  },
+        {"skill_name": "Creativity", "status": 90  },
+        {"skill_name": "Resilience", "status": 90  },
+        {"skill_name": "Curiosity", "status": 90  },
+        {"skill_name": "Empathy", "status": 90  }
+    ],    
+    "projects": [
+        {
+            "project_name": "Tech Talk - Blog Platform", 
+            "project_description":"This web application is a full-featured blog platform built using a modern technology stack. It allows users to read, create, update, and interact with blog articles. The platform supports user authentication and authorization, enabling users to sign up, log in, and manage their articles and comments. ", 
+            "website":"http://54.73.125.6/",
+            "github":"https://github.com/ridmi-balasooriya/Blog-Platform-Final",
+            "technologies_used":[
+                {
+                    "tech_name":"Frontend: React.js",
+                    "desc":"A dynamic and responsive user interface for an engaging user experience."
+                },
+                {
+                    "tech_name":"Backend: Django",
+                    "desc":"A robust and secure REST API built using Django Rest Framework."
+                },
+                {
+                    "tech_name":"Database: PostgreSQL",
+                    "desc":"A powerful, open-source relational database system."
+                },
+                {
+                    "tech_name":"Storage: AWS S3",
+                    "desc":"Used for storing static and media files."
+                },
+                {
+                    "tech_name":"Database Service: AWS RDS (PostgreSQL)",
+                    "desc":"Managed relational database service for PostgreSQL."
+                },
+                {
+                    "tech_name":"Deployment: AWS Elastic Beanstalk",
+                    "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                }
+            ],
+            "features":[
+                "User Management: Users can sign up, log in, and manage their profiles.",
+                "Article Management: Users can write, update, and delete articles.",
+                "Comments and Likes: Users can comment on and like articles.",
+                "Responsive Design: The platform is designed to work seamlessly on both desktop and mobile devices."
+            ]
+        },
+        {
+            "project_name": "Portfolio Website", 
+            "project_description":"This is a personal portfolio website designed to showcase information about myself, including my professional and educational qualifications, skills, contact details, and projects. The website provides a comprehensive overview of my background and capabilities, serving as a digital resume and contact point for potential clients or employers.", 
+            "website":"http://localhost:3000/",
+            "github":"https://github.com/ridmi-balasooriya/personal-portfolio",
+            "technologies_used":[
+                {
+                    "tech_name":"Frontend: React.js",
+                    "desc":"A dynamic and responsive user interface for an engaging user experience."
+                },
+                {
+                    "tech_name":"Backend: Django",
+                    "desc":"A robust and secure REST API built using Django Rest Framework."
+                },
+                {
+                    "tech_name":"Data Storage: JSON",
+                    "desc":"Data is stored in a JSON file for simplicity and ease of management."
+                },
+                {
+                    "tech_name":"Storage: AWS S3",
+                    "desc":"Used for storing static and media files."
+                },
+                {
+                    "tech_name":"Deployment: AWS Elastic Beanstalk",
+                    "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                }
+            ],
+            "features":[
+                "Professional Overview: Detailed information about my career background, including job roles, responsibilities, and achievements.",
+                "Educational Qualifications: A section dedicated to my academic achievements and relevant certifications.",
+                "Skills: A comprehensive list of my technical skills, tools, and technologies with descriptions of my proficiency in each",
+                "Projects: Showcases of significant projects I've worked on, including descriptions, technologies used, and links to live demos or repositories.",
+                "Contact Information: Provides multiple ways to get in touch with me, including email and social media links."
+            ]
+        }
+    ]
+}
