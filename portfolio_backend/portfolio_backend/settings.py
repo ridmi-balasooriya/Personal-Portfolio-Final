@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
+from storages.backends.s3boto3 import S3Boto3Storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'personal_portfolio',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -115,11 +117,40 @@ USE_I18N = True
 
 USE_TZ = True
 
+# AWS S3 Bucket Config
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+AWS_LOCATION = 'static'
+AWS_DEFAULT_ACL = None
+AWS_S3_REGION_NAME = os.getenv('AWS_S3_REGION_NAME')
+AWS_QUERYSTRING_AUTH = False
+
+
+# Define custom storage backend for static files
+class StaticStorage(S3Boto3Storage):
+    location = 'static'
+    default_acl = 'public-read'
+
+
+# Define custom storage backend for media files (if needed)
+class MediaStorage(S3Boto3Storage):
+    location = 'media'
+    default_acl = 'public-read'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# Static files (CSS, JavaScript, images)
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'personal_portfolio.storage_backends.StaticStorage'
+
+# Media files (user uploads)
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'personal_portfolio.storage_backends.MediaStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
