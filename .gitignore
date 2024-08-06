@@ -24,3 +24,13 @@ portfolio_backend/db.sqlite3
 portfolio_backend/portfolio_backend/__pycache__
 portfolio_backend/personal_portfolio/__pycache__
 portfolio_backend/.env
+
+# Elastic Beanstalk Files
+portfolio_backend/.elasticbeanstalk/*
+portfolio_backend/!.elasticbeanstalk/*.cfg.yml
+portfolio_backend/!.elasticbeanstalk/*.global.yml
+portfolio_backend/*.pyc
+
+__pycache__/
+portfolio_backend/staticfiles/
+portfolio_backend/.env
