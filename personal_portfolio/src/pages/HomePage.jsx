@@ -8,6 +8,7 @@ import TechSkills from './PortfolioComponents/TechSkills';
 import SoftSkills from './PortfolioComponents/SoftSkills';
 import ContactDetails from './PortfolioComponents/ContactDetails';
 import Projects from './PortfolioComponents/Projects';
+import API_BASE_URL from '../config';
 //import Footer from './Footer';
 
 const HomePage = () => {
@@ -24,7 +25,7 @@ const HomePage = () => {
 
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/data/')
+        fetch(`${API_BASE_URL}/api/data/`)
         .then(
             response => response.json()
         )
