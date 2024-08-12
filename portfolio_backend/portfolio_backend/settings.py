@@ -158,6 +158,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Sign the Location List list which is given permission to request from. *Don't add the trailer slash at the end of the path.
 CORS_ALLOWED_ORIGINS = [
+    'http://192.168.70.233:3000',
     'http://localhost:3000',
 ]
 
