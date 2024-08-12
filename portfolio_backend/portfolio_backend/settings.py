@@ -147,7 +147,6 @@ class MediaStorage(S3Boto3Storage):
 # Static files (CSS, JavaScript, images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'personal_portfolio.storage_backends.StaticStorage'
 
 # Media files (user uploads)
 MEDIA_URL = '/media/'
