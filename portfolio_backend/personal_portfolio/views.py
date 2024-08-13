@@ -7,20 +7,22 @@ from django.conf import settings
 from django.http import JsonResponse
 
 
-
 def home(request):
 
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    portfolio_data_file_path = os.path.join(BASE_DIR, 'personal_portfolio/portfolio_data', 'portfolio.json' )
+    portfolio_data_file_path = os.path.join(
+        BASE_DIR, 'personal_portfolio/portfolio_data', 'portfolio.json')
 
     with open(portfolio_data_file_path) as json_file:
         portfolio = json.load(json_file)
 
     return JsonResponse({'portfolio': portfolio})
 
+
 def get_csrf_token(request):
     token = get_token(request)
     return JsonResponse({'csrf_token': token})
+
 
 @csrf_exempt
 def sendmessage(request):
@@ -39,4 +41,4 @@ def sendmessage(request):
 
         return JsonResponse({'message': responsMessage})
     else:
-        return JsonResponse({'error': 'Invalid Request Method'}, status = 400)
+        return JsonResponse({'error': 'Invalid Request Method'}, status=400)
