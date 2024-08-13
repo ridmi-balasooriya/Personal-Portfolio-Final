@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import API_BASE_URL from '../../config';
 
 const ContactDetails = (props) => {
 
@@ -20,7 +21,7 @@ const ContactDetails = (props) => {
     useEffect(() => {
         const fetcCsfrToken = () => {
             try{
-                axios.get('http://127.0.0.1:8000/api/get-csrf-token/')
+                axios.get(`${API_BASE_URL}/api/get-csrf-token/`)
                 .then(respond => {
                     const { csrf_token } = respond.data;
                     setCsrfToken(csrf_token)
