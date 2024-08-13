@@ -34,3 +34,4 @@ portfolio_backend/*.pyc
 __pycache__/
 portfolio_backend/staticfiles/
 portfolio_backend/.env
+--.github/
