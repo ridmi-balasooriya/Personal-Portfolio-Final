@@ -4,8 +4,6 @@ import API_BASE_URL from '../../config';
 
 const ContactDetails = (props) => {
 
-    const { contactD, sMedia } = props;
-
     const nameRef = useRef();
     const emailRef = useRef();
     const messageRef = useRef();
@@ -76,7 +74,7 @@ const ContactDetails = (props) => {
         
         setIsLoading(true);
 
-        axios.post('http://127.0.0.1:8000/api/sendmessage/', formData, {headers})
+        axios.post(`${API_BASE_URL}/api/sendmessage/`, formData, {headers})
         .then(response => {
             const { message } = response.data
             setSuccessMessage(message);
