@@ -34,7 +34,6 @@ jobs:
                   eb init -p python-3.11 ${{ secrets.EB_ENV }} --region ${{ secrets.AWS_S3_REGION_NAME }} --platform "python-3.11"
                   eb use ${{ secrets.EB_ENV }}
                   sleep 5
-                  eb deploy
                   eb deploy --verbose
               env:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
