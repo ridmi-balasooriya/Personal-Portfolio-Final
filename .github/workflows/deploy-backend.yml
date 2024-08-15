@@ -31,9 +31,11 @@ jobs:
             - name: Create Application Version
               run: |
                   cd portfolio_backend
-                  VERSION_LABEL=$(date +%Y%m%d%H%M%S)-${{ github.sha }}
-                  eb init -p python-3.11 ${{ secrets.EB_ENV }} --region eu-west-1 --platform "python-3.11"
-                  eb use ${{ secrets.EB_ENV }}
+                  SHORT_COMMIT_HASH=${{ github.sha::7 }}
+                  TIMESTAMP=$(date +%Y%m%d%H%M%S)
+                  ENV_NAME="${{ secrets.EB_ENV }}-${TIMESTAMP}-${SHORT_COMMIT_HASH}"
+                  eb init -p python-3.11 $ENV_NAME --region eu-west-1 --platform "python-3.11"
+                  eb use $ENV_NAME
                   eb create $VERSION_LABEL --verbose
               env:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
