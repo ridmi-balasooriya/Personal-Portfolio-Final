@@ -113,6 +113,7 @@
         {"skill_name": "Bootstrap", "status": 70 },
         {"skill_name": "Tailwind Css", "status": 50 }, 
         {"skill_name": "GIT/GIT Hub", "status": 50 },
+        {"skill_name": "CI/CD - GitHub Actions", "status": 50 },
         {"skill_name": "Amazon Web Services", "status": 40 },        
         {"skill_name": "PostgreSQL/MySQL", "status": 50  },
         {"skill_name": "NodeJS", "status": 40 },
