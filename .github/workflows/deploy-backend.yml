@@ -31,7 +31,7 @@ jobs:
             - name: Create Application Version
               run: |
                   cd portfolio_backend
-                  SHORT_COMMIT_HASH=${{ github.sha::7 }}
+                  SHORT_COMMIT_HASH=$(echo $GITHUB_SHA | cut -c1-7)
                   TIMESTAMP=$(date +%Y%m%d%H%M%S)
                   ENV_NAME="${{ secrets.EB_ENV }}-${TIMESTAMP}-${SHORT_COMMIT_HASH}"
                   eb init -p python-3.11 $ENV_NAME --region eu-west-1 --platform "python-3.11"
