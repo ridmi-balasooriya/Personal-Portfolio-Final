@@ -1,9 +1,9 @@
-name: Deploy Backend
+name: Deploy to Elastic Beanstalk
 
 on:
     push:
-        paths:
-            - "portfolio_backend/**"
+        branches:
+            - main
 
 jobs:
     deploy:
@@ -18,22 +18,18 @@ jobs:
               with:
                   python-version: "3.11"
 
-            - name: Install AWS Elastic Beanstalk CLI
-              run: |
-                  pip install awsebcli --upgrade
-
             - name: Install dependencies
               run: |
-                  cd portfolio_backend
                   python -m pip install --upgrade pip
-                  pip install -r requirements.txt
+                  pip install -r portfolio_backend/requirements.txt
 
             - name: Create Application Version
               run: |
                   cd portfolio_backend
                   SHORT_COMMIT_HASH=$(echo $GITHUB_SHA | cut -c1-7)
                   TIMESTAMP=$(date +%Y%m%d%H%M%S)
-                  ENV_NAME="${{ secrets.EB_ENV }}-${TIMESTAMP}-${SHORT_COMMIT_HASH}"
+                  VERSION_LABEL="${TIMESTAMP}-${SHORT_COMMIT_HASH}"
+                  echo "VERSION_LABEL=$VERSION_LABEL" >> $GITHUB_ENV
               env:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
                   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -43,8 +39,10 @@ jobs:
             - name: Deploy to Elastic Beanstalk
               run: |
                   cd portfolio_backend
-                  eb init -p python-3.11 $ENV_NAME --region eu-west-1 --platform "python-3.11"
-                  eb use $ENV_NAME
+
+                  # Initialize EB environment only if it's not already set up
+                  eb init -p python-3.11 ${{ secrets.EB_APP_NAME }} --region eu-west-1
+                  eb use ${{ secrets.EB_ENV }}
                   eb deploy --label $VERSION_LABEL --verbose
               env:
                   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
