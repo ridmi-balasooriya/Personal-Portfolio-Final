@@ -39,8 +39,6 @@ jobs:
             - name: Deploy to Elastic Beanstalk
               run: |
                   cd portfolio_backend
-
-                  # Initialize EB environment only if it's not already set up
                   eb init -p python-3.11 ${{ secrets.EB_APP_NAME }} --region eu-west-1
                   eb use ${{ secrets.EB_ENV }}
                   eb deploy --label $VERSION_LABEL --verbose
