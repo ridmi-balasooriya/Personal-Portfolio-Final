@@ -12,7 +12,7 @@ const EducationQualification = (props) => {
                             <p className="text-sm mb-4">{value.school}</p> 
                             <p>{value.field}</p>    
                             <p className="mb-4">{value.grade}</p>                            
-                            <p className="text-sm my-1">{value.end_date}</p>
+                            <p className="text-sm mb-1">{value.end_date}</p>
                             
                         </div>
                     ))
