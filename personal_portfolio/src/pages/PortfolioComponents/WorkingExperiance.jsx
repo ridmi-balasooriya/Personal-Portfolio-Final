@@ -3,7 +3,7 @@ const WorkingExperiance = (props) => {
 
     return(
         <section id='experiance' className="portfolio_section px-4 text-center">
-            <h2>Professional Experiance</h2>
+            <h2>Work Experiance</h2>
             <div className="flexsblockdiv my-6">
                 {
                     Object.entries(workExp).map(([key, value]) => (
