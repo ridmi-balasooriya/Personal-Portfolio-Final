@@ -146,7 +146,7 @@
                     "desc":"A dynamic and responsive user interface for an engaging user experience."
                 },
                 {
-                    "tech_name":"Backend: Django",
+                    "tech_name":"Backend: Django, Python",
                     "desc":"A robust and secure REST API built using Django Rest Framework."
                 },
                 {
@@ -177,14 +177,14 @@
             "project_name": "Portfolio Website", 
             "project_description":"This is a personal portfolio website designed to showcase information about myself, including my professional and educational qualifications, skills, contact details, and projects. The website provides a comprehensive overview of my background and capabilities, serving as a digital resume and contact point for potential clients or employers.", 
             "website":"http://ridmi-personal-portfolio.s3-website-eu-west-1.amazonaws.com/",
-            "github":"https://github.com/ridmi-balasooriya/Personal-Portfolio-Final",
+            "github":"https://github.com/ridmi-balasooriya/Personal-Portfolio-Final/",
             "technologies_used":[
                 {
                     "tech_name":"Frontend: React.js",
                     "desc":"A dynamic and responsive user interface for an engaging user experience."
                 },
                 {
-                    "tech_name":"Backend: Django",
+                    "tech_name":"Backend: Django, Python",
                     "desc":"A robust and secure REST API built using Django Rest Framework."
                 },
                 {
