@@ -2,8 +2,8 @@ name: Deploy Frontend
 
 on:
     push:
-        branches:
-            - main
+        paths:
+            - "personal_portfolio/**"
 
 jobs:
     deploy:
@@ -20,7 +20,7 @@ jobs:
 
             - name: Install dependencies and build
               run: |
-                  cd portfolio/personal_portfolio
+                  cd personal_portfolio
                   npm install
                   npm run build
 
