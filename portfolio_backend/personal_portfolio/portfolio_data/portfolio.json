@@ -116,9 +116,9 @@
         {"skill_name": "CI/CD - GitHub Actions", "status": 50 },
         {"skill_name": "Amazon Web Services", "status": 40 },        
         {"skill_name": "PostgreSQL/MySQL", "status": 50  },
-        {"skill_name": "NodeJS", "status": 40 },
-        {"skill_name": "ExpressJS", "status": 40 },
-        {"skill_name": "MongoDB", "status": 40 }
+        {"skill_name": "NodeJS", "status": 20 },
+        {"skill_name": "ExpressJS", "status": 20 },
+        {"skill_name": "MongoDB", "status": 20 }
     ],
     "soft_skills": [
         {"skill_name": "Communication", "status": 90 },
@@ -198,6 +198,10 @@
                 {
                     "tech_name":"Deployment: AWS Elastic Beanstalk",
                     "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                },
+                {
+                    "tech_name":"CI/CD: GitHub Actions",
+                    "desc":"Automated workflows for continuous integration and deployment, ensuring smooth and consistent updates to the portfolio website."
                 }
             ],
             "features":[

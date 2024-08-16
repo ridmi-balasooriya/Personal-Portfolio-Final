@@ -13,7 +13,7 @@ const Projects = (props) => {
 
     return(
         <section id='education' className="portfolio_section px-6">
-            <h2>My Projects</h2>              
+            <h2>Showcase of Projects</h2>              
             <div className="flexsblockdiv my-6">
                 {
                     Object.entries(projects).map(([key, value]) => (
