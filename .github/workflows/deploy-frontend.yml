@@ -2,8 +2,8 @@ name: Deploy Frontend
 
 on:
     push:
-        paths:
-            - "portfolio/personal_portfolio/**"
+        branches:
+            - main
 
 jobs:
     deploy:

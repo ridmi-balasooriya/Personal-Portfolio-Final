@@ -2,8 +2,8 @@ name: Deploy to Elastic Beanstalk
 
 on:
     push:
-        paths:
-            - "portfolio/portfolio_backend/**"
+        branches:
+            - main
 
 jobs:
     deploy:
