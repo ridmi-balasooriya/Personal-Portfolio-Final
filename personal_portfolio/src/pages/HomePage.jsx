@@ -68,9 +68,9 @@ const HomePage = () => {
             if (screenSize !== newScreenSize) {
                 setScreenSize(newScreenSize);
                 // Update `mainContent` based on the new screen size only if necessary
-                if (newScreenSize === 'large' && mainContent !== '#experiance') {
+                if (newScreenSize === 'large') {
                     setMainContent('#experiance');
-                } else if (newScreenSize !== 'large' && mainContent !== '#profile') {
+                } else if (newScreenSize !== 'large') {
                     setMainContent('#profile');
                 }
             }

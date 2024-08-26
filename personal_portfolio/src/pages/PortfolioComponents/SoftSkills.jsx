@@ -2,7 +2,7 @@ const SoftSkills = (props) => {
     const softSkills = props.softSkills
 
     return(
-        <section id='softSkills' className="portfolio_section px-16 pt-24 text-center">
+        <section id='softSkills' className="portfolio_section px-16 pt-24 pb-10 text-center">
             <h2>Soft Skills</h2>     
             <div className="flexsblockdiv">
                 {
