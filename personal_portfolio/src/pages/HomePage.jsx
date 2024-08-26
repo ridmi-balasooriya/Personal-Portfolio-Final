@@ -56,7 +56,7 @@ const HomePage = () => {
 
 
     const [screenSize, setScreenSize] = useState(getScreenSize());
-    const [mainContent, setMainContent] = useState('#experiance');
+    const [mainContent, setMainContent] = useState(getScreenSize() === 'large' ? '#experiance' : '#profile');
 
     
     useEffect(() => {
@@ -68,9 +68,9 @@ const HomePage = () => {
             if (screenSize !== newScreenSize) {
                 setScreenSize(newScreenSize);
                 // Update `mainContent` based on the new screen size only if necessary
-                if (newScreenSize === 'large') {
+                if (newScreenSize === 'large' && mainContent !== '#experiance') {
                     setMainContent('#experiance');
-                } else if (newScreenSize !== 'large') {
+                } else if (newScreenSize !== 'large' && mainContent !== '#profile') {
                     setMainContent('#profile');
                 }
             }
