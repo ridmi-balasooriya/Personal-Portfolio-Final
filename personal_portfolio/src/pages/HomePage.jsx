@@ -46,30 +46,42 @@ const HomePage = () => {
         softSkills = pPortfolio.portfolio.soft_skills;
         projects = pPortfolio.portfolio.projects
     }
-    const [screenSize, setScreenSize] = useState('');
-    const [mainContent, setMainContent] = useState('');
 
+    const getScreenSize = () => {
+        const width = window.innerWidth;
+        if (width < 650) return 'small';
+        if (width >= 650 && width < 880) return 'medium';
+        return 'large';
+    }
+
+
+    const [screenSize, setScreenSize] = useState(getScreenSize());
+    const [mainContent, setMainContent] = useState('#experiance');
+
+    
     useEffect(() => {
         const handleResize = () => {
             const width = window.innerWidth;
-            if(width < 650){
-                setScreenSize('small');
-                setMainContent('#profile');
-            }else if(width >= 650 && width < 880){
-                setScreenSize('medium');
-                setMainContent('#profile');
-            }else{
-                setScreenSize('large');
-                setMainContent('#experiance');
-            }
-        }
+            const newScreenSize = width < 650 ? 'small' :
+                                  width >= 650 && width < 880 ? 'medium' : 'large';
 
-        handleResize();
+            if (screenSize !== newScreenSize) {
+                setScreenSize(newScreenSize);
+                // Update `mainContent` based on the new screen size only if necessary
+                if (newScreenSize === 'large' && mainContent !== '#experiance') {
+                    setMainContent('#experiance');
+                } else if (newScreenSize !== 'large' && mainContent !== '#profile') {
+                    setMainContent('#profile');
+                }
+            }
+        };
+
+        handleResize(); // Initial check
         window.addEventListener('resize', handleResize);
         return () => {
             window.removeEventListener('resize', handleResize);
-        }
-    }, [])
+        };
+    }, [screenSize, mainContent]);
 
 
     

@@ -30,34 +30,6 @@ const ContactDetails = (props) => {
         
         }
         fetcCsfrToken();
-
-        const handleFocus = (e) => {
-            // Prevent scrolling when focusing on input
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${window.scrollY}px`;
-        };
-
-        const handleBlur = () => {
-            // Reset scroll position and body position
-            document.body.style.position = '';
-            document.body.style.top = '';
-            window.scrollTo(0, parseInt(document.body.style.top || '0') * -1);
-        };
-
-        // Add event listeners
-        document.querySelectorAll('.contact_form input, .contact_form textarea').forEach((input) => {
-            input.addEventListener('focus', handleFocus);
-            input.addEventListener('blur', handleBlur);
-        });
-
-        // Clean up event listeners on component unmount
-        return () => {
-            document.querySelectorAll('.contact_form input, .contact_form textarea').forEach((input) => {
-                input.removeEventListener('focus', handleFocus);
-                input.removeEventListener('blur', handleBlur);
-            });
-        };
-        
     }, [])
 
     const validateForm = () => {
