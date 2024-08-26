@@ -488,7 +488,8 @@ nav ul li:first-child{
         width: 100%;
     }
     .contact_form input, .contact_form textarea, .contact_form button{
-        width: 95%;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 @media screen and (min-width: 480px) {
