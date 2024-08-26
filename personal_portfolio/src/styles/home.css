@@ -486,6 +486,8 @@ nav ul li:first-child{
     }
     .contact_form{
         width: 100%;
+        min-height: 100vh;
+        overflow: hidden;
     }
     .contact_form input, .contact_form textarea, .contact_form button{
         width: 100%;
