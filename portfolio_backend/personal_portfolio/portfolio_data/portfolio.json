@@ -181,35 +181,37 @@
             "technologies_used":[
                 {
                     "tech_name":"Frontend: React.js",
-                    "desc":"A dynamic and responsive user interface for an engaging user experience."
+                    "desc":"Provides a dynamic, responsive, and engaging user interface with seamless single-page navigation."
                 },
                 {
                     "tech_name":"Backend: Django",
-                    "desc":"A robust and secure REST API built using Django Rest Framework."
+                    "desc":"A robust and secure backend that delivers data through REST APIs using Django Rest Framework."
                 },
                 {
                     "tech_name":"Data Storage: JSON",
-                    "desc":"Data is stored in a JSON file for simplicity and ease of management."
+                    "desc":"Simple and efficient storage of personal and project data in JSON format, allowing for easy management and updates."
                 },
                 {
                     "tech_name":"Storage: AWS S3",
-                    "desc":"Used for storing static and media files."
+                    "desc":"Utilized for hosting the frontend and storing static assets, ensuring quick and reliable content delivery."
                 },
                 {
                     "tech_name":"Deployment: AWS Elastic Beanstalk",
-                    "desc":"An easy-to-use service for deploying and scaling web applications and services."
+                    "desc":"A scalable and easy-to-use service for deploying and managing the backend application."
                 },
                 {
                     "tech_name":"CI/CD: GitHub Actions",
-                    "desc":"Automated workflows for continuous integration and deployment, ensuring smooth and consistent updates to the portfolio website."
+                    "desc":"Automated workflows for continuous integration and deployment, ensuring smooth and consistent updates to both the frontend and backend."
                 }
             ],
             "features":[
-                "Professional Overview: Detailed information about my career background, including job roles, responsibilities, and achievements.",
-                "Educational Qualifications: A section dedicated to my academic achievements and relevant certifications.",
-                "Skills: A comprehensive list of my technical skills, tools, and technologies with descriptions of my proficiency in each",
-                "Projects: Showcases of significant projects I've worked on, including descriptions, technologies used, and links to live demos or repositories.",
-                "Contact Information: Provides multiple ways to get in touch with me, including email and social media links."
+                "Responsive Design: The portfolio is fully responsive, offering an optimal user experience across devices such as desktops, tablets, and smartphones.",
+                "Dynamic Single-Page Navigation: Sections like Experience, Projects, Education, Tech Skills, Soft Skills, and Contact load seamlessly without page reloads.",
+                "Interactive Contact Form: Visitors can contact me directly through a form that sends an automated email to my inbox.",
+                "REST API Integration: The backend efficiently serves data through REST APIs, enabling dynamic content updates and seamless interaction with the frontend.",
+                "CI/CD Integration: Automated CI/CD pipelines with GitHub Actions ensure reliable and efficient deployment processes.",
+                "AWS Deployment: The backend is deployed on AWS Elastic Beanstalk, while the frontend is hosted on AWS S3, showcasing proficiency in cloud-based solutions.",
+                "Comprehensive Professional Profile: Includes detailed information about my career background, educational qualifications, technical skills, notable projects, and multiple contact options, providing a complete overview of my professional journey and expertise."
             ]
         }
     ]
