@@ -169,7 +169,10 @@
             "features":[
                 "User Management: Users can sign up, log in, and manage their profiles.",
                 "Article Management: Users can write, update, and delete articles.",
-                "Comments and Likes: Users can comment on and like articles.",
+                "Comments and Likes: Users can comment on and like articles. Users also can delete and update their own comments and remove there likes",
+                "Category Management: User can add, update, search, and delete Categories.",
+                "Tag Management: User can add, update, search, and delete Tags.",
+                "Article Search: Search article according to the title or category",
                 "Responsive Design: The platform is designed to work seamlessly on both desktop and mobile devices."
             ]
         },
