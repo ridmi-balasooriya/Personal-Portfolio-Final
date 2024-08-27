@@ -48,7 +48,7 @@ const Projects = (props) => {
                                 <h4 className="mb-2 text-left w-full">Features</h4>
                                 <ul className="text-sm mb-4 w-full">
                                     {value.features.map((value, index) =>
-                                        <li key={index}>{value}</li>
+                                        <li key={index}><strong>- </strong> {value}</li>
                                     )}
                                 </ul>
                             </div> 
