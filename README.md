@@ -34,7 +34,6 @@ This project is a personal portfolio website designed to showcase my professiona
 ### Sample URL
 
 You can view and interact with the deployed application at the following URL:
-Personal Portfolio
 [Personal Portfolio](http://ridmi-personal-portfolio.s3-website-eu-west-1.amazonaws.com/)
 
 ## Conclusion
