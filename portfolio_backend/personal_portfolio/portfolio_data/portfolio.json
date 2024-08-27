@@ -3,7 +3,7 @@
         "name": "Ridmi Balasooriya",
         "title": "Full Stack Engineer",
         "image" : "ridmi-balasooriya.png",
-        "summary": "I am a skilled full stack engineer with 9 years of experience in web development, including expertise in HTML, CSS, JavaScript, and frameworks like React.js and Django. Having developed and maintained projects such as a blog platform and a personal portfolio, I am proficient with AWS, PostgreSQL, and CI/CD tools. As a proactive team player, I bring creativity, problem-solving skills, and a collaborative attitude to every project. I am passionate about continuous learning and thrive in dynamic environments."
+        "summary": "I am a self-motivated and creative problem-solver with a positive can-do attitude. I am always eager to learn new skills and take on new challenges to advance my career. As a proactive team player with strong communication skills, I am dedicated to contributing to the success of any team I work with."
     },        
     "contact_details": {
             "address": "Dubai, UAE",
@@ -114,8 +114,8 @@
         {"skill_name": "Tailwind Css", "status": 50 }, 
         {"skill_name": "GIT/GIT Hub", "status": 50 },
         {"skill_name": "CI/CD - GitHub Actions", "status": 50 },
-        {"skill_name": "Amazon Web Services", "status": 40 },        
-        {"skill_name": "PostgreSQL/MySQL", "status": 50  },
+        {"skill_name": "Amazon Web Services", "status": 30 },        
+        {"skill_name": "PostgreSQL/MySQL", "status": 30  },
         {"skill_name": "NodeJS", "status": 20 },
         {"skill_name": "ExpressJS", "status": 20 },
         {"skill_name": "MongoDB", "status": 20 }
