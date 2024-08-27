@@ -138,7 +138,7 @@
         {
             "project_name": "Tech Talk - Blog Platform", 
             "project_description":"This web application is a full-featured blog platform built using a modern technology stack. It allows users to read, create, update, and interact with blog articles. The platform supports user authentication and authorization, enabling users to sign up, log in, and manage their articles and comments. ", 
-            "website":"http://ridmi-personal-portfolio.s3-website-eu-west-1.amazonaws.com/",
+            "website":"http://env-blog.eba-rqbv9mhp.eu-west-1.elasticbeanstalk.com/",
             "github":"https://github.com/ridmi-balasooriya/Blog-Platform-Final",
             "technologies_used":[
                 {
