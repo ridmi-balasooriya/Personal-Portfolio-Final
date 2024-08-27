@@ -37,7 +37,7 @@ const Projects = (props) => {
 
                             <div className={`w-full ${isExpanded[key]? 'block' : 'hidden'}`}>
                                 <h4 className="mb-2 text-left w-full">Technologies Used</h4>
-                                <ul className="text-sm mb-4 w-full">
+                                <ul className="text-sm ml-5 mb-4 w-full list-disc">
                                     {value.technologies_used.map((tech,index) => (
                                         <li key={index}>
                                             <strong>{tech.tech_name} - </strong>
@@ -46,9 +46,9 @@ const Projects = (props) => {
                                     ))}
                                 </ul>
                                 <h4 className="mb-2 text-left w-full">Features</h4>
-                                <ul className="text-sm mb-4 w-full">
+                                <ul className="text-sm ml-5 mb-4 w-full list-disc">
                                     {value.features.map((value, index) =>
-                                        <li key={index}><strong>- </strong> {value}</li>
+                                        <li key={index}>{value}</li>
                                     )}
                                 </ul>
                             </div> 
